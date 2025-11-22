@@ -1,0 +1,363 @@
+/* --- VARIABLES Y ESTILOS GLOBALES --- */
+:root {
+    --verde-intenso: #2E7D32;
+    --verde-oscuro: #1B5E20;
+    --amarillo-suave: #FFFDE7;
+    --blanco-tarjeta: #FFFFFF;
+    --texto-principal: #333333;
+    --texto-secundario: #555555;
+    --verde-spotify: #1DB954;
+    --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --borde-redondeado: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--amarillo-suave);
+    color: var(--texto-principal);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: var(--verde-intenso);
+    margin-bottom: 20px;
+}
+
+h1 { font-size: 2.8rem; line-height: 1.2; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.5rem; }
+
+p {
+    margin-bottom: 15px;
+    color: var(--texto-secundario);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--verde-intenso);
+    color: var(--blanco-tarjeta);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--verde-oscuro);
+    transform: translateY(-3px);
+}
+
+/* --- HEADER Y NAVEGACIÓN --- */
+.main-header {
+    background-color: rgba(255, 253, 231, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--verde-intenso);
+    text-decoration: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--verde-oscuro);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--verde-intenso);
+}
+
+/* --- HERO SECTION --- */
+#hero {
+    text-align: center;
+    padding: 80px 0;
+}
+
+#hero h1 {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#hero .subtitle {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+#hero .qr-info {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: var(--texto-secundario);
+}
+
+/* --- SECCIÓN SOBRE GUAYUSANA --- */
+#sobre .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra-suave);
+    object-fit: cover;
+}
+
+/* --- SECCIÓN KIT DE MEZCLA --- */
+#kit {
+    background-color: var(--blanco-tarjeta);
+}
+.steps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+}
+.step .step-number {
+    width: 60px;
+    height: 60px;
+    background-color: var(--amarillo-suave);
+    color: var(--verde-intenso);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    border: 2px solid var(--verde-intenso);
+}
+
+/* --- SECCIÓN RECETARIO --- */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.recipe-card {
+    background-color: var(--blanco-tarjeta);
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra-suave);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.recipe-card .badges {
+    margin-bottom: 15px;
+}
+
+.recipe-card .badge {
+    display: inline-block;
+    background-color: var(--amarillo-suave);
+    color: var(--verde-oscuro);
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.recipe-card ul, .recipe-card ol {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.recipe-card .creator-tip {
+    background-color: #f8f9fa;
+    border-left: 4px solid var(--verde-intenso);
+    padding: 15px;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* --- SECCIÓN PLAYLIST --- */
+#playlist {
+    background-color: #191414;
+    color: #FFFFFF;
+    text-align: center;
+}
+#playlist h2 {
+    color: #FFFFFF;
+}
+#playlist p {
+    color: #B3B3B3;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+.btn-spotify {
+    background-color: var(--verde-spotify);
+    font-size: 1.1rem;
+}
+.btn-spotify:hover {
+    background-color: #1ED760;
+}
+
+/* --- SECCIÓN COMUNIDAD --- */
+#comunidad {
+    text-align: center;
+}
+.testimonial {
+    background-color: var(--blanco-tarjeta);
+    padding: 30px;
+    border-radius: var(--borde-redondeado);
+    max-width: 700px;
+    margin: 30px auto 0 auto;
+    box-shadow: var(--sombra-suave);
+    position: relative;
+}
+.testimonial::before {
+    content: '“';
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 4rem;
+    color: var(--amarillo-suave);
+    font-weight: 800;
+    z-index: 0;
+}
+.testimonial p {
+    position: relative;
+    z-index: 1;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+.testimonial .author {
+    margin-top: 15px;
+    font-weight: 600;
+    color: var(--verde-intenso);
+}
+
+/* --- SECCIÓN CONTACTO --- */
+#contacto {
+    background-color: var(--blanco-tarjeta);
+}
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--verde-intenso);
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.2);
+}
+.submit-btn {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+/* --- FOOTER --- */
+.main-footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--amarillo-suave);
+    border-top: 1px solid #e0e0e0;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+    .main-nav { display: none; } /* Menú simple para móvil, se podría implementar con JS */
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+}
+
+@media (min-width: 768px) {
+    .steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .recipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    #sobre .container {
+        grid-template-columns: 1.2fr 1fr;
+    }
+    .recipe-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
