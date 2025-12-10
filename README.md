@@ -4,18 +4,39 @@ Este es el repositorio del recetario digital para "Guayusana", una bebida energi
 
 ## Tecnologías Utilizadas
 
-Este es un sitio web estático construido exclusivamente con:
+Este es un sitio web estático construido con:
 
 -   **HTML5:** Para la estructura y el contenido semántico.
--   **CSS3:** Para el diseño, la responsividad y los estilos visuales, todo integrado en el propio archivo HTML.
+-   **CSS3:** Para el diseño, la responsividad y los estilos visuales. Los estilos están organizados en múltiples archivos para mayor legibilidad y mantenimiento.
 
-No se utilizan frameworks de CSS, librerías de JavaScript ni archivos externos.
+No se utilizan frameworks de CSS ni librerías de JavaScript.
 
 ## Estructura del Proyecto
 
-El proyecto consta de dos archivos principales en la raíz:
+El proyecto tiene la siguiente estructura de archivos:
 
--   `index.html`: Contiene toda la estructura, contenido y estilos de la página web.
+```
+Guayusana-page/
+├── index.html
+├── README.md
+├── assets/
+│   └── guayusana.jpeg
+└── css/
+    ├── styles.css
+    ├── base.css
+    ├── responsive.css
+    └── components/
+        ├── header.css
+        ├── sections.css
+        ├── cards.css
+        ├── forms.css
+        └── footer.css
+```
+
+-   `index.html`: Contiene toda la estructura y contenido de la página.
+-   `css/styles.css`: Archivo principal de estilos que importa todos los demás archivos de CSS.
+-   `css/components/`: Directorio que contiene los archivos de CSS separados por componente (header, footer, etc.).
+-   `assets/`: Contiene los recursos de imágen.
 -   `README.md`: Este mismo archivo, que proporciona información sobre el proyecto.
 
 ## Cómo Usarlo
@@ -26,13 +47,14 @@ Para un desarrollo más avanzado, puedes usar una extensión de servidor en vivo
 
 ## Personalización
 
-Puedes personalizar fácilmente varios aspectos del sitio directamente en el archivo `index.html`:
+Puedes personalizar fácilmente varios aspectos del sitio.
 
-### Colores y Estilos
+### Colores y Estilos Globales
 
-Los colores principales están definidos como variables CSS al inicio del bloque `<style>` en el `<head>`. Puedes cambiar estos valores para alterar la paleta de colores de todo el sitio.
+Los colores principales y los estilos globales (tipografía, espaciado) están definidos como variables CSS en el archivo `css/components/base.css`. Puedes cambiar estos valores para alterar la paleta de colores de todo el sitio.
 
 ```css
+/* css/components/base.css */
 :root {
     --verde-intenso: #2E7D32;
     --amarillo-suave: #FFFDE7;
@@ -44,24 +66,11 @@ Los colores principales están definidos como variables CSS al inicio del bloque
 
 ### Añadir o Editar Recetas
 
-Las recetas se encuentran en la sección con `id="recetas"`. Cada receta es un `<article class="recipe-card">`. Para añadir una nueva, simplemente copia y pega uno de estos artículos y modifica su contenido:
-
--   El nombre de la receta (`<h3>`).
--   Las etiquetas (`<span class="badge">`).
--   La lista de ingredientes (`<ul>`).
--   Los pasos de preparación (`<ol>`).
--   El "Tip del creador" (`<p>`).
+Las recetas se encuentran en la sección con `id="recetas"` dentro de `index.html`. Cada receta es un `<article class="recipe-card">`. Para añadir una nueva, simplemente copia y pega uno de estos artículos y modifica su contenido.
 
 ### Enlace de la Playlist de Spotify
 
-El enlace a la playlist de Spotify se encuentra en la sección con `id="playlist"`. Busca el siguiente bloque de código y reemplaza la URL de ejemplo (`https://open.spotify.com/playlist/XXXXXXXXX`) por el enlace real de tu playlist.
-
-```html
-<!-- IMPORTANTE: Reemplaza la URL de ejemplo de abajo por el enlace real de tu playlist de Spotify -->
-<a href="https://open.spotify.com/playlist/XXXXXXXXX" class="btn btn-spotify" target="_blank">
-    Escuchar playlist en Spotify
-</a>
-```
+El enlace a la playlist de Spotify se encuentra en la sección con `id="playlist"` en `index.html`. Busca el `<a>` con la clase `btn-spotify` y reemplaza la URL en el atributo `href`.
 
 ## Créditos
 
