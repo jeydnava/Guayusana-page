@@ -8,6 +8,7 @@
 </head>
 <body>
 
+    <!-- ====== HEADER ====== -->
     <header class="main-header" id="inicio">
         <div class="container">
             <a href="#inicio" class="logo">Guayusana</a>
@@ -24,6 +25,7 @@
     </header>
 
     <main>
+        <!-- ====== HERO SECTION ====== -->
         <section id="hero">
             <div class="container">
                 <h1>Crea tu propia energía con Guayusana</h1>
@@ -33,6 +35,7 @@
             </div>
         </section>
 
+        <!-- ====== ABOUT SECTION ====== -->
         <section id="sobre">
             <div class="container">
                 <div class="text-content">
@@ -46,9 +49,10 @@
             </div>
         </section>
 
+        <!-- ====== KIT SECTION ====== -->
         <section id="kit">
             <div class="container">
-                <h2 style="text-align: center;">Tu energía, tus reglas: El Kit de Mezcla</h2>
+                <h2 class="text-center">Tu energía, tus reglas: El Kit de Mezcla</h2>
                 <div class="steps-grid">
                     <div class="step">
                         <div class="step-number">1</div>
@@ -69,9 +73,10 @@
             </div>
         </section>
 
+        <!-- ====== RECIPES SECTION ====== -->
         <section id="recetas">
             <div class="container">
-                <h2 style="text-align: center;">Recetario Guayusana</h2>
+                <h2 class="text-center">Recetario Guayusana</h2>
                 <div class="recipe-grid">
                     <!-- Receta 1: Jengibre y Limón -->
                     <article class="recipe-card">
@@ -125,7 +130,7 @@
                             <span class="badge">Vibrante</span>
                         </div>
                         <h4>Ingredientes:</h4>
-                         <ul>
+                        <ul>
                             <li>1 Botella de Guayusana Base</li>
                             <li>1 Kit de Mezcla "Maracuyá y Miel"</li>
                             <li>Hielo y agua con gas (opcional)</li>
@@ -164,16 +169,18 @@
             </div>
         </section>
 
+        <!-- ====== PLAYLIST SECTION ====== -->
         <section id="playlist">
             <div class="container">
                 <h2>Energía para tus mezclas</h2>
                 <p>Hemos creado la playlist perfecta para acompañarte mientras estudias, trabajas o simplemente disfrutas de tu momento Guayusana. Sube el volumen y deja que la música potencie tu energía.</p>
-                <a href="https://open.spotify.com/playlist/7bBTskEo2q6pv0ZXgmppDE?si=FQXz2YZ9TNWiscmG4UsPBA&pi=VcYMKHRDS1-zU" class="btn btn-spotify" target="_blank">
+                <a href="https://open.spotify.com/playlist/7bBTskEo2q6pv0ZXgmppDE?si=FQXz2YZ9TNWiscmG4UsPBA&pi=VcYMKHRDS1-zU" class="btn btn-spotify" target="_blank" rel="noopener noreferrer">
                     Escuchar playlist en Spotify
                 </a>
             </div>
         </section>
 
+        <!-- ====== COMMUNITY SECTION ====== -->
         <section id="comunidad">
             <div class="container">
                 <h2>Únete a la comunidad Guayusana</h2>
@@ -185,11 +192,13 @@
             </div>
         </section>
 
+        <!-- ====== CONTACT SECTION ====== -->
         <section id="contacto">
             <div class="container">
-                <h2 style="text-align: center;">¿Quieres saber más?</h2>
-                <p style="text-align: center;">Déjanos tus datos y sé el primero en recibir noticias, nuevas recetas y promociones especiales de Guayusana.</p>
-                <form action="#" method="POST" class="contact-form">
+                <h2 class="text-center">¿Quieres saber más?</h2>
+                <p class="text-center">Déjanos tus datos y sé el primero en recibir noticias, nuevas recetas y promociones especiales de Guayusana.</p>
+                <form action="https://formspree.io/f/manrplyy" method="POST" class="contact-form">
+                    <input type="hidden" name="form-origin" value="contact">
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
                         <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
@@ -202,8 +211,64 @@
                 </form>
             </div>
         </section>
+
+        <!-- ====== FEEDBACK SECTION ====== -->
+        <section id="feedback">
+            <div class="container">
+                <h2 class="text-center">Cuéntanos tu experiencia</h2>
+                <p class="text-center">Tu opinión nos ayuda a mejorar. ¡Gracias por tomarte un momento para evaluarnos!</p>
+                <form action="https://formspree.io/f/manrplyy" method="POST" class="contact-form feedback-form">
+                    <input type="hidden" name="form-origin" value="feedback">
+
+                    <fieldset class="form-group">
+                        <legend>1. ¿Qué te pareció el sabor?</legend>
+                        <div class="radio-group">
+                            <label class="radio-label"><input type="radio" name="sabor" value="Excelente" required><span>Excelente</span></label>
+                            <label class="radio-label"><input type="radio" name="sabor" value="Bueno"><span>Bueno</span></label>
+                            <label class="radio-label"><input type="radio" name="sabor" value="Regular"><span>Regular</span></label>
+                            <label class="radio-label"><input type="radio" name="sabor" value="Malo"><span>Malo</span></label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                        <legend>2. ¿Cómo consideras el precio?</legend>
+                        <div class="radio-group">
+                            <label class="radio-label"><input type="radio" name="precio" value="Justo" required><span>Justo</span></label>
+                            <label class="radio-label"><input type="radio" name="precio" value="Caro"><span>Caro</span></label>
+                            <label class="radio-label"><input type="radio" name="precio" value="Barato"><span>Barato</span></label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                        <legend>3. ¿Qué tan atractivo te parece el concepto y la botella?</legend>
+                        <div class="radio-group">
+                            <label class="radio-label"><input type="radio" name="atractivo" value="Muy atractivo" required><span>Muy atractivo</span></label>
+                            <label class="radio-label"><input type="radio" name="atractivo" value="Atractivo"><span>Atractivo</span></label>
+                            <label class="radio-label"><input type="radio" name="atractivo" value="Poco atractivo"><span>Poco atractivo</span></label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                        <legend>4. ¿Sentiste el efecto energizante de la guayusa?</legend>
+                        <div class="radio-group">
+                            <label class="radio-label"><input type="radio" name="efecto_energizante" value="Si, claramente" required><span>Sí, claramente</span></label>
+                            <label class="radio-label"><input type="radio" name="efecto_energizante" value="Si, un poco"><span>Sí, un poco</span></label>
+                            <label class="radio-label"><input type="radio" name="efecto_energizante" value="No lo noté"><span>No lo noté</span></label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="experiencia">Cuéntanos más sobre tu experiencia (opcional)</label>
+                        <textarea id="experiencia" name="experiencia" rows="4" placeholder="Tus comentarios, ideas o sugerencias..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn submit-btn">Enviar opinión</button>
+                </form>
+            </div>
+        </section>
     </main>
 
+    <!-- ====== FOOTER ====== -->
     <footer class="main-footer">
         <p>&copy; 2025 Guayusana. Toda la energía, naturalmente tuya.</p>
     </footer>
