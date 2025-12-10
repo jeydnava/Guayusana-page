@@ -1,0 +1,48 @@
+/* --- SECCIÓN RECETARIO --- */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.recipe-card {
+    background-color: var(--blanco-tarjeta);
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra-suave);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.recipe-card .badges {
+    margin-bottom: 15px;
+}
+
+.recipe-card .badge {
+    display: inline-block;
+    background-color: var(--amarillo-suave);
+    color: var(--verde-oscuro);
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.recipe-card ul, .recipe-card ol {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.recipe-card .creator-tip {
+    background-color: #f8f9fa;
+    border-left: 4px solid var(--verde-intenso);
+    padding: 15px;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,130 @@
+/* --- HERO SECTION --- */
+#hero {
+    text-align: center;
+    padding: 80px 0;
+}
+
+#hero h1 {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#hero .subtitle {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+#hero .qr-info {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: var(--texto-secundario);
+}
+
+/* --- SECCIÓN SOBRE GUAYUSANA --- */
+#sobre .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra-suave);
+    object-fit: cover;
+}
+
+/* --- SECCIÓN KIT DE MEZCLA --- */
+#kit {
+    background-color: var(--blanco-tarjeta);
+}
+.steps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+}
+.step .step-number {
+    width: 60px;
+    height: 60px;
+    background-color: var(--amarillo-suave);
+    color: var(--verde-intenso);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    border: 2px solid var(--verde-intenso);
+}
+
+/* --- SECCIÓN PLAYLIST --- */
+#playlist {
+    background-color: #191414;
+    color: #FFFFFF;
+    text-align: center;
+}
+#playlist h2 {
+    color: #FFFFFF;
+}
+#playlist p {
+    color: #B3B3B3;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+.btn-spotify {
+    background-color: var(--verde-spotify);
+    font-size: 1.1rem;
+}
+.btn-spotify:hover {
+    background-color: #1ED760;
+}
+
+/* --- SECCIÓN COMUNIDAD --- */
+#comunidad {
+    text-align: center;
+}
+.testimonial {
+    background-color: var(--blanco-tarjeta);
+    padding: 30px;
+    border-radius: var(--borde-redondeado);
+    max-width: 700px;
+    margin: 30px auto 0 auto;
+    box-shadow: var(--sombra-suave);
+    position: relative;
+}
+.testimonial::before {
+    content: '“';
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 4rem;
+    color: var(--amarillo-suave);
+    font-weight: 800;
+    z-index: 0;
+}
+.testimonial p {
+    position: relative;
+    z-index: 1;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+.testimonial .author {
+    margin-top: 15px;
+    font-weight: 600;
+    color: var(--verde-intenso);
+}
