@@ -112,3 +112,11 @@
     color: var(--verde-intenso);
     font-weight: 700;
 }
+
+/* --- Estilos para centrar Google Forms --- */
+#contacto .container,
+#feedback .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
