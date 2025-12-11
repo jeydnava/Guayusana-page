@@ -6,6 +6,14 @@
     .main-nav { display: none; } /* Menú simple para móvil, se podría implementar con JS */
     h1 { font-size: 2.2rem; }
     h2 { font-size: 1.8rem; }
+
+    /* Ajuste para Google Forms en móvil */
+    #contacto iframe,
+    #feedback iframe {
+        width: 100%;
+        /* Puedes ajustar la altura si ves que es muy alta o muy corta en el móvil */
+        height: 700px; 
+    }
 }
 
 @media (min-width: 768px) {
