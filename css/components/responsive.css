@@ -1,5 +1,8 @@
 /* --- RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
+    #sobre .container {
+        grid-template-columns: 1fr;
+    }
     .main-nav { display: none; } /* Menú simple para móvil, se podría implementar con JS */
     h1 { font-size: 2.2rem; }
     h2 { font-size: 1.8rem; }
